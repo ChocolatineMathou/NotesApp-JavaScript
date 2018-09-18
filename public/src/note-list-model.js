@@ -3,7 +3,7 @@
     this.notes = [];
   };
 
-  NoteList.prototype.notesReturn = function() {
+  NoteList.prototype.allNotes = function() {
     return this.notes;
   };
 

@@ -9,9 +9,6 @@
 
     assert.isTrue((noteListView.noteList) === testNoteList, 'noteListView takes an object on instantiation');
 
-    console.log(testNoteList);
-    console.log(testNoteList.notesReturn())
-
     assert.isTrue(noteListView.displayHTML() === "<ul><li>Test</li><li>Test2</li></ul>", "noteListView.displayHTML() return a HTML string of all note texts")
 
   };
