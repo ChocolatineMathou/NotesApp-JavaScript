@@ -7,12 +7,22 @@
     <script src="src/note-list-view.js"></script>
     <script src="src/note-model.js"></script>
 
+
     <script src="test/lib/assert.js"></script>
     <script src="test/note-test.js"></script>
     <script src="test/note-list-model-test.js"></script>
     <script src="test/note-list-view-test.js"></script>
   </head>
   <body>
-    I've loaded
+    <div id="app">
+      hello
+    </div>
+
+      <script src="src/note-controller.js"></script>
+      <script src="src/note-list-view.js"></script>
+      <script type="text/javascript">
+        var noteList = new NoteList();
+        var controller = new NoteController(noteList);
+      </script>
   </body>
 </html>
