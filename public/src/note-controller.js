@@ -1,12 +1,13 @@
 (function(exports) {
 
-  function NoteController() {
-    var result = document.getElementById("app")
-    console.log(result)
-    result.innerHTML = "howdy"
+  function NoteController(noteList) {
+    noteList.createNote('Favourite drink: San Pellegrino with a slice of lemon')
+    noteListView = new NoteListView(noteList)
   }
 
   NoteController.prototype.updateDisplay = function() {
+    var result = document.getElementById("app")
+    result.innerHTML = noteListView.displayHTML();
 
   };
 

@@ -3,15 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Note App</title>
-    <script src="src/note-list-model.js"></script>
-    <script src="src/note-list-view.js"></script>
-    <script src="src/note-model.js"></script>
-
-
-    <script src="test/lib/assert.js"></script>
-    <script src="test/note-test.js"></script>
-    <script src="test/note-list-model-test.js"></script>
-    <script src="test/note-list-view-test.js"></script>
   </head>
   <body>
     <div id="app">
@@ -20,9 +11,19 @@
 
       <script src="src/note-controller.js"></script>
       <script src="src/note-list-view.js"></script>
+      <script src="src/note-list-model.js"></script>
+      <script src="src/note-list-view.js"></script>
+      <script src="src/note-model.js"></script>
+
+      <script src="test/lib/assert.js"></script>
+      <script src="test/note-test.js"></script>
+      <script src="test/note-list-model-test.js"></script>
+      <script src="test/note-list-view-test.js"></script>
+      <script src="test/note-controller-test.js"></script>
       <script type="text/javascript">
         var noteList = new NoteList();
         var controller = new NoteController(noteList);
+        controller.updateDisplay();
       </script>
   </body>
 </html>
