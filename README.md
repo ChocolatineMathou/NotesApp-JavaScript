@@ -18,25 +18,25 @@ OOP principles were used when designing the app:
 ║  Browser   ║ User enters new note     
 ║            ║
 ╚════════════╝
-
+(no dynamic display on our html yet)
  
 ╔════════════╗  
-║            ║ 
-║Controller? ║ Talks to our model? (Does not yet exist)     
-║            ║
-╚════════════╝    
-      
-      
-      
-      
-						╔════════════╗
-						║  Note List ║
-						║    View    ║ Creates an HTML string for all note texts
-						║            ║ 
-						╚════════════╝
-  
-      
-        
+║            ║ Takes NoteList object as a constructor argument
+║ Controller ║ Instantiates new Note with hard-coded text    
+║            ║ Instantiates new NoteListView
+╚════════════╝ Method to update display   
+      |
+      |
+      |
+      |
+	  |					╔════════════╗
+	  |					║  Note List ║
+	  |-----------------║    View    ║ Creates an HTML string for all note texts
+	  |					║            ║ 
+	  |					╚════════════╝
+      |
+      |
+      |  
 ╔════════════╗   
 ║            ║ Returns all Note objects   
 ║    Note    ║ Creates a new Note object and pushes it to a list of all notes
