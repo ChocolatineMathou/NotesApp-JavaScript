@@ -29,11 +29,11 @@ OOP principles were used when designing the app:
       |
       |
       |
-	  |					╔════════════╗
-	  |					║  Note List ║
-	  |-----------------║    View    ║ Creates an HTML string for all note texts
-	  |					║            ║ 
-	  |					╚════════════╝
+      |					╔════════════╗
+      |					║  Note List ║
+      |---------------------------------║    View    ║ Creates an HTML string for all note texts
+      |					║            ║ 
+      |					╚════════════╝
       |
       |
       |  
