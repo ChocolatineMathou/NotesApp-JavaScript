@@ -5,7 +5,7 @@
 
   NoteListView.prototype.displayHTML = function() {
     var noteArray = this.noteList.allNotes() // array of note objects
-    var textArray = noteArray.map(note => note.text);
+    var textArray = noteArray.map(note => note.text.slice(0, 20));
     return "<ul><li>" + textArray.join('</li><li>') + "</li></ul>"
   }
 

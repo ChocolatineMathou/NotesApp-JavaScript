@@ -11,7 +11,7 @@
 
     assert.isTrue(noteListView.noteList === noteListDouble, 'NoteController instantiates and passes noteList to noteListView');
 
-    assert.isTrue(noteListView.displayHTML() === "<ul><li>Favourite drink: San Pellegrino with a slice of lemon</li></ul>", 'NoteContoller.displayHTML() returns HTML string from NoteListView');
+    assert.isTrue(noteListView.displayHTML() === "<ul><li>Favourite drink: San</li></ul>", 'NoteContoller.displayHTML() returns HTML string from NoteListView');
   }
 
   noteControllerTest();

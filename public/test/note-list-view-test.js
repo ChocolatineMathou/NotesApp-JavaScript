@@ -4,7 +4,7 @@
 
     var testNoteList = new NoteList();
     testNoteList.createNote("Test");
-    testNoteList.createNote("Test2")
+    testNoteList.createNote("Test2");
     var noteListView = new NoteListView(testNoteList);
 
     assert.isTrue((noteListView.noteList) === testNoteList, 'NoteListView takes an object on instantiation');
@@ -14,5 +14,16 @@
   };
 
   noteListViewTests();
+
+  function twentyCharactersTest() {
+
+    var testNoteList = new NoteList();
+    testNoteList.createNote("This is a really long note that will hopefully be more than 20 characters.")
+    var noteListView = new NoteListView(testNoteList);
+
+    assert.isTrue(noteListView.displayHTML() ===  "<ul><li>This is a really lon</li></ul>", "It displays the first 20 characters of a note");
+  }
+
+  twentyCharactersTest();
 
 })(this);
