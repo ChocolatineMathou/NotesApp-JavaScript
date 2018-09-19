@@ -7,9 +7,9 @@
     testNoteList.createNote("Test2")
     var noteListView = new NoteListView(testNoteList);
 
-    assert.isTrue((noteListView.noteList) === testNoteList, 'noteListView takes an object on instantiation');
+    assert.isTrue((noteListView.noteList) === testNoteList, 'NoteListView takes an object on instantiation');
 
-    assert.isTrue(noteListView.displayHTML() === "<ul><li>Test</li><li>Test2</li></ul>", "noteListView.displayHTML() return a HTML string of all note texts")
+    assert.isTrue(noteListView.displayHTML() === "<ul><li>Test</li><li>Test2</li></ul>", "NoteListView.displayHTML() returns an HTML string of all Note texts")
 
   };
 
