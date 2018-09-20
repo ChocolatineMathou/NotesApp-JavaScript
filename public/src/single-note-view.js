@@ -5,7 +5,6 @@
   }
 
   SingleNoteView.prototype.displayHTML = function () {
-        // return "<div>" + this.note.text + "</div>"
         return `<div>${this.note.text}</div>`
   };
 

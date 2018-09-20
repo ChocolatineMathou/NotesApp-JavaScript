@@ -9,4 +9,12 @@
 
   testNoteInstantiation();
 
+  function testNoteModelUniqueId() {
+    var note = new Note("Hello Thursday!")
+
+    assert.isTrue(note.idReturn() === 2, 'Note has a unique ID')
+  }
+
+  testNoteModelUniqueId();
+
 })(this);
