@@ -26,4 +26,20 @@
 
   twentyCharactersTest();
 
+  function testNoteListViewUrl() {
+
+    var testNoteList = new NoteList();
+    testNoteList.createNote("Aidez moi ! Je suis perdu !")
+    var noteListView = new NoteListView(testNoteList);
+    console.log(testNoteList.notes[0].id);
+    console.log(testNoteList);
+    console.log(window.location.href);
+    console.log(document.URL);
+
+    assert.isTrue(testNoteList.notes.window.location.href === "http://localhost:8080#notes/7", 'It displays the URL for each note');
+
+  };
+
+  testNoteListViewUrl();
+
 })(this);
