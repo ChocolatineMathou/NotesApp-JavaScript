@@ -13,7 +13,7 @@
 
   NoteListDouble.prototype.allNotes = function() {
       return this.notes;
-  };  
+  };
 
   exports.NoteListDouble = NoteListDouble;
 })(this);

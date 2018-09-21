@@ -1,7 +1,6 @@
 (function(exports) {
 
   function NoteController(noteList) {
-    noteList.createNote('Favourite drink: San Pellegrino with a slice of lemon')
     noteListView = new NoteListView(noteList)
   }
 

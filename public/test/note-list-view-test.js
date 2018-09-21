@@ -9,7 +9,7 @@
 
     assert.isTrue((noteListView.noteList) === testNoteList, 'NoteListView takes an object on instantiation');
 
-    assert.isTrue(noteListView.displayHTML() === "<ul><li>Test</li><li>Test2</li></ul>", "NoteListView.displayHTML() returns an HTML string of all Note texts")
+    assert.isTrue(noteListView.displayHTML() === '<ul><li><a href="#notes/4">Test</a></li><li><a href="#notes/5">Test2</a></li></ul>', "NoteListView.displayHTML() returns an HTML string of all Note texts")
 
   };
 
@@ -21,7 +21,7 @@
     testNoteList.createNote("This is a really long note that will hopefully be more than 20 characters.")
     var noteListView = new NoteListView(testNoteList);
 
-    assert.isTrue(noteListView.displayHTML() ===  "<ul><li>This is a really lon</li></ul>", "It displays the first 20 characters of a note");
+    assert.isTrue(noteListView.displayHTML() ===  '<ul><li><a href="#notes/6">This is a really lon</a></li></ul>', "It displays the first 20 characters of a note");
   }
 
   twentyCharactersTest();
@@ -31,12 +31,9 @@
     var testNoteList = new NoteList();
     testNoteList.createNote("Aidez moi ! Je suis perdu !")
     var noteListView = new NoteListView(testNoteList);
-    console.log(testNoteList.notes[0].id);
-    console.log(testNoteList);
-    console.log(window.location.href);
-    console.log(document.URL);
+    var testId = 6
 
-    assert.isTrue(testNoteList.notes.window.location.href === "http://localhost:8080#notes/7", 'It displays the URL for each note');
+    assert.isTrue(window.location.href === "http://localhost:8080/#notes/"+testId, 'It displays the URL for each note');
 
   };
 
